@@ -1,0 +1,8 @@
+# next JS
+/.next/
+
+# local env file
+.env
+
+# dependencies
+/node_modules
