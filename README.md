@@ -1,0 +1,2 @@
+# next-movie
+nextJS practice
