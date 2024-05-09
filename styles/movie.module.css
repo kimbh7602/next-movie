@@ -1,7 +1,7 @@
 .movie {
   display: grid;
   grid-template-rows: 1fr auto;
-  gap: 20px;
+  gap: 5px;
   cursor: pointer;
   place-items: center;
 }
@@ -9,12 +9,11 @@
 .movie img {
   max-width: 100%;
   min-height: 100%;
-  border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
 }
 
 .movie img {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .movie img:hover {
@@ -22,5 +21,22 @@
 }
 
 .movie a {
+  width: 100%;
   text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.slideWrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4%;
+
+  .slick-list {
+    margin: 0 -7px;
+    .slick-slide > div {
+      padding: 0 10px;
+    }
+  }
 }

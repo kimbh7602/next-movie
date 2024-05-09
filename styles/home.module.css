@@ -1,8 +1,61 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.movies {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  row-gap: 30px;
   max-width: 90%;
   width: 100%;
   margin: 0 auto;
+}
+
+.poster {
+  position: relative;
+  width: 100%;
+}
+
+.poster img {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+}
+
+.float {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  opacity: 0.7;
+}
+
+.float p {
+  background: rgba(256, 256, 256, 0.8);
+}
+
+.float h1 {
+  font-size: 4vw;
+  color: #fff;
+}
+
+.float p {
+  margin-top: 20px;
+  font-size: 1.5vw;
+  color: #fff;
+  width: 40%;
+}
+
+@media screen and (max-width: 720px) {
+  .float h1 {
+    font-size: 5vw;
+  }
+
+  .float p {
+    display: none;
+  }
 }
