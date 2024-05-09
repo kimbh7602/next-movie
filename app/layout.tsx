@@ -1,6 +1,7 @@
-import "../styles/global.css";
+import "styles/global.css";
 import { Metadata } from "next";
-import Navigation from "../components/navigation";
+import Navigation from "components/navigation";
+import StyledComponentsRegistry from "lib/registry";
 
 export const metadata: Metadata = {
   title: {
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navigation />
-        {children}
+        <StyledComponentsRegistry>
+          <Navigation />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
